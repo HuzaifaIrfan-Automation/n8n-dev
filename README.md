@@ -5,5 +5,6 @@
 ```sh
 cp example.env .env
 mkdir -p n8n_data
+mkdir -p n8n_db
 mkdir -p files
 ```
