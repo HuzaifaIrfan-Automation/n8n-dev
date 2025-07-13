@@ -31,7 +31,7 @@ services:
 
     volumes:
       - ./n8n_data:/home/node/.n8n
-      - ./local-files:/files
+      - ./backups:/home/node/backups
     networks:
       - web
       - n8n
@@ -39,6 +39,8 @@ services:
     depends_on:
       n8n-postgres:
         condition: service_healthy
+
+
 
   n8n-postgres:
     image: postgres:16-alpine
