@@ -30,7 +30,7 @@ services:
 
 
     volumes:
-      - ./n8n_data:/home/node/.n8n
+      - n8n_data:/home/node/.n8n
       - ./backups:/home/node/backups
     networks:
       - web
@@ -72,5 +72,7 @@ networks:
     external: true
 
 volumes:
+  n8n_data:
+    driver: local
   n8n_db:
     driver: local
